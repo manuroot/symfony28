@@ -1,0 +1,365 @@
+#=============================
+Notes Techniques
+#=============================
+php.ini
+    memory_limit = 512M
+#===========================
+Creer un bundle
+#===========================
+
+#===========================
+Vider cache
+#===========================
+php app/console cache:clear 
+D:\APPLIX\xamp56\php\php.exe  app/console cache:clear
+php -d memory_limit=256M app/console cache:clear
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console cache:clear 
+
+#===========================
+Dotrine et assets
+#===========================
+
+D:\APPLIX\wamp\bin\php\php5.4
+D:\APPLIX\xamp56\php\php.exe
+D:\APPLIX\xamp56\php
+D:\APPLIX\xamp56\php app/console doctrine:schema:update --dump-sql
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console doctrine:schema:update --dump-sql
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console doctrine:schema:update --force
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console doctrine:schema:update --force
+
+D:\APPLIX\xamp56\php\php.exe app/console assets:install web
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console assets:install web
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console assetic:dump --env=dev --no-debug
+
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console assetic:dump --env=dev --no-debug
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console assets:install web
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console assetic:dump --env=prod --no-debug
+
+
+D:\APPLIX\xamp56\php\php.exe app/console" cache:clear
+D:\APPLIX\NetbeansProjets\symfony241\app\console" "--ansi" "cache:clear
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe" "D:\APPLIX\NetbeansProjets\symfony241\app\console" "--ansi" "assets:install
+
+#===========================
+Creer/update/revoke user
+#===========================
+
+D:\APPLIX\xamp56\php\php.exe app/console fos:user:create adminuser --super-admin
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console fos:user:create adminuser --super-admin
+
+#===========================
+Composer sous windows
+#===========================
+
+set HTTP_PROXY=http://username:password@monproxy:port && 
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe composer.phar update
+
+
+
+php app/console fos:user:create adminuser --super-admin
+php app/console fos:user:create testuser test@example.com p@ssword
+php app/console fos:user:create testuser --inactive
+php app/console fos:user:activate testuser
+php app/console fos:user:deactivate testuser
+php app/console fos:user:promote testuser ROLE_ADMIN
+php app/console fos:user:demote testuser ROLE_ADMIN
+php app/console fos:user:change-password testuser newp@ssword
+
+php composer require sonata-project/user-bundle --no-update
+php composer require sonata-project/doctrine-orm-admin-bundle  --no-update # optional
+php composer update
+
+No site available for the current request with uri http://symvideo:97/login
+
+php composer.phar require sonata-project/admin-bundle
+
+
+ php app/console doctrine:schema:update --force
+
+ "sonata-project/core-bundle": "~2.2@dev",
+        "sonata-project/admin-bundle": "2.2.*@dev",
+        "sonata-project/cache-bundle":"~2.1",
+        "sonata-project/block-bundle": "2.2.*@dev",
+        "sonata-project/intl-bundle":"2.1.*",
+        "sonata-project/jquery-bundle": "1.8.*@dev",
+        "sonata-project/media-bundle": "2.2.*@dev",
+        "sonata-project/formatter-bundle": "dev-master",
+
+#===========================
+Etendre un bundle
+#===========================
+
+php app/console sonata:easy-extends:generate SonataMediaBundle --dest=src
+ php app/console sonata:easy-extends:generate SonataAdminBundle --dest=src
+
+
+#===========================
+Creer structure bundle
+#===========================
+
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console generate:bundle
+
+
+php app/console generate:bundle
+  Bundle namespace:  Application/ProductsBundle <enter>
+Bundle name [ApplicationProductsBundle]: <enter>
+Target directory [/var/www/symfony241/src]: <enter>
+Configuration format (yml, xml, php, or annotation): yml <enter>
+Do you want to generate the whole directory structure [no]? yes
+You are going to generate a "Application\ProductsBundle\ApplicationProductsBundle" bundle
+in "/var/www/symfony241/src/" using the "yml" format.
+
+Do you confirm generation [yes]?<enter>
+Generating the bundle code: OK 
+Checking that the bundle is autoloaded: OK
+Confirm automatic update of your Kernel [yes]? <enter>
+Enabling the bundle inside the Kernel: OK
+Confirm automatic update of the Routing [yes]? <enter>
+Importing the bundle routing resource: OK
+
+
+
+#===========================
+Generer entities
+#===========================
+
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console generate:doctrine:entity
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console doctrine:generate:entities SdzBlogBundle:Article
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console doctrine:generate:entities ApplicationProjetBundle:Projets
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console doctrine:generate:entities ApplicationProjetBundle:Environnement
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console doctrine:generate:entities ApplicationProjetBundle:Serveurs
+
+
+php app/console generate:doctrine:entity
+==>SdzBlogBundle:Article
+==> annotation
+
+php app/console doctrine:generate:entities SdzBlogBundle:Article
+Generating entity "Sdz\BlogBundle\Entity\Article"
+> backing up Article.php to Article.php~
+> generating Sdz\BlogBundle\Entity\Article
+# creer tables
+php app/console doctrine:schema:update --dump-sql
+# valider
+php app/console doctrine:schema:update --force
+
+
+#===========================
+Sonata extend
+#===========================
+
+php app/console sonata:easy-extends:generate SonataAdminBundle -d src
+
+git status -s
+git commit -am 'changes to hello file'
+git push -u origin master
+# cloner branch
+git clone -b <branch> <remote_repo>
+git clone -b my-branch https://git@github.com/username/myproject.git
+
+==> creer branch
+1) infos
+git branch
+* master
+2) creer brch
+git branch feature
+create a new feature branch in the repository
+
+$ git branch feature
+3) Switch to the feature branch to work on it.
+
+$ git checkout feature
+
+Commit the change to the feature branch:
+
+$ git add .
+$ git commit -m "adding a change from the feature branch"
+Switch back to the master branch.
+
+$ git checkout master
+Push the feature branch to Bitbucket.
+
+$ git push origin feature
+#===========================
+Sonata user
+#===========================
+
+: Undefined index: enabled
+
+#===========================
+Sonata images
+#===========================
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    form:
+        resources:
+            # other files
+            - 'SonataMediaBundle:Form:media_widgets.html.twig'
+
+#===========================
+Generer CRUD (yml)
+#===========================
+
+D:\APPLIX\xamp56\php\php.exe app/console generate:doctrine:crud --entity=ApplicationProjetBundle:Version
+D:\APPLIX\wamp\bin\php\php5.4.12\php.exe app/console generate:doctrine:crud --entity=ApplicationProjetBundle:Serveurs
+php app/console generate:doctrine:crud --entity=AcmeBlogBundle:Post
+php app/console generate:doctrine:crud --route-prefix=acme_post
+php app/console generate:doctrine:crud --with-write
+php app/console generate:doctrine:crud --format=annotation
+ex:
+php app/console generate:doctrine:crud --entity=ApplicationEvolutionBundle:SuiviEvolution --format=annotation --with-write --route-prefix=evolution
+
+#===========================
+Composer
+#===========================
+
+php composer.phar show -i
+
+#===========================
+missing vendor resources
+#===========================
+
+cd /var/www/symfony241/
+ 2000  cd web/bundles/sonataadmin/
+ 2001  ls
+ 2002  cd vendor/
+ 2003  ls
+ 2004  cp /data2/torrent_data2/vendorsonataadmin/AdminLTE/fonts/* AdminLTE/fonts/
+ 2005  cp /data2/torrent_data2/vendorsonataadmin/AdminLTE/img/* AdminLTE/img/
+ 2006  cp /data2/torrent_data2/vendorsonataadmin/AdminLTE/css/ AdminLTE/css/
+ 2007  cp /data2/torrent_data2/vendorsonataadmin/AdminLTE/css/* AdminLTE/css/
+ 2008  cp -r /data2/torrent_data2/vendorsonataadmin/select2 select2
+ 2009  ls
+ 2010  chown -R www-data:manuroot *
+ 2011  ls
+ 2012  cp -r /data2/torrent_data2/vendorsonataadmin/bootstrap bootstrap
+ 2013  ls
+ 2014  chown -R www-data:manuroot *
+
+
+#===========================
+SERVICES
+#===========================
+php app/console container:debug
+php app/console container:debug --show-private
+php app/console container:debug service_id
+#===========================
+ROUTES
+#===========================
+php app/console router:debug
+app/console router:match /uri
+#==========================
+Services
+#==========================
+php app/console container:debug application_main.registration.form.type
+php app/console sonata::explain application_main.registration.form.type
+php app/console container:debug --show-private
+
+php app/console doctrine:mapping:info
+
+#=============================
+# sql
+#=============================
+SHOW CREATE TABLE  eproduits_pret
+ ALTER TABLE eproduits_pret DROP FOREIGN KEY FK_998AE5BA5D37D0F1
+ALTER TABLE eproduits_pret DROP INDEX IDX_998AE5BA5D37D0F1
+
+KEY `IDX_5C6DD74E12469DE2` (`category_id`),
+ CONSTRAINT `FK_5C6DD74E12469DE2` FOREIGN KEY (`category_id`
+#=============================
+Events
+#=============================
+dans controller:
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class ChannelController extends Controller
+{
+    public function createAction()
+    {
+        $dispatcher = $this->get('event_dispatcher');
+        // ...
+    }
+}
+$this->dispatcher = $this->getContainer()->get('event_dispatcher');
+
+#====================
+Google/Facebook
+#====================
+https://developers.facebook.com/
+https://console.developers.google.com/project
+
+
+
+<VirtualHost *:90>
+  DocumentRoot "/var/www/eproduitv2/web"
+    ServerName symvideo
+    DirectoryIndex app_dev.php
+        <Directory "/var/www/eproduitv2/web">
+                Options Indexes FollowSymLinks MultiViews
+               RewriteEngine On
+               AllowOverride None
+                Order allow,deny
+               allow from all
+              RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ app_dev.php [QSA,L]
+  
+       <IfModule mod_php5.c>
+               AddType application/x-httpd-php .php
+               php_flag magic_quotes_gpc Off
+               php_flag track_vars On
+               php_flag register_globals On
+               php_value include_path .
+       </IfModule>
+    </Directory>
+
+    </VirtualHost>
+
+
+#================================
+connexion
+#================================
+google:
+IDENTIFIANT CLIENT xxxx
+URI DE REDIRECTION  
+http://manuroot.zapto.org/login/check-google
+http://manuroot.zapto.org/auth/google_auth2/callback
+ORIGINES JAVASCRIPT  http://manuroot.zapto.org
+
+
+   /*
+              $alldatas = $request->request->all();
+              $mydatas = $alldatas['application_eservicesbundle_eproduitgroup'];
+              // $parameters = $datas;
+              var_dump($mydatas);
+              exit(1);
+             */
+
+    // MAJ DES USERS SI NECESSAIRE
+            list($user_id, $group_id) = $this->getuserid();
+            $current_user = $em->getRepository('ApplicationSonataUserBundle:User')->find($user_id);
+            $entity->addUser($current_user);
+
+            $em->persist($entity);
+            $em->flush();
+
+            $this->sendfosmessagetouser($entity, "Updaté");
+            $session->getFlashBag()->add('warning', "Enregistrement $id update successfull");
+            return $this->redirect($this->generateUrl($myretour));
+        }
+        /* else {  
+          $alldatas = $request->request->all();
+          $mydatas = $alldatas['application_eproduit'];
+          // $parameters = $datas;
+          var_dump($mydatas);
+          } */
+
+ /*    else {
+          $alldatas = $request->request->all();
+          $mydatas = $alldatas['application_mybadgebundle_badge'];
+          // $parameters = $datas;
+          var_dump($mydatas);
+          }
+         */
